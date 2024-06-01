@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { scrollUp } from "../../util/scrollUp";
-import { Dispatch, SetStateAction, useRef } from "react";
-import { useOnClickOutside } from "usehooks-ts";
+import { Dispatch, SetStateAction } from "react";
 
 type params = {
   menuNo: number;
@@ -26,8 +25,6 @@ const Category = ({
   setMenu2,
   setMenu3,
 }: params) => {
-  const ref = useRef(null);
-
   var subCatState: any;
   const setState = () => {
     switch (menuNo) {
@@ -75,18 +72,10 @@ const Category = ({
     scrollUp();
   };
 
-  const handleClose = () => {
-    setMenu1(false);
-    setMenu2(false);
-    setMenu3(false);
-  };
-
-  useOnClickOutside(ref, handleClose);
-
   return (
     <div className="flex dropdown">
       <div
-        ref={ref}
+        // ref={ref}
         onClick={() => handleToggle()}
         tabIndex={0}
         role="button"
@@ -99,6 +88,7 @@ const Category = ({
       </div>
 
       <ul
+        // ref={ref}
         tabIndex={0}
         className={`absolute bottom-0 translate-y-full z-[1] p-2 pb-3 shadow-md shadow-gray-500 flex flex-col rounded-b-xl bg-base-200 ${
           !subCatState && "hidden"
@@ -107,10 +97,12 @@ const Category = ({
         {subCategory.map((subCat, index) => {
           return (
             <li
+              //   ref={ref}
               key={index}
               className="hover:opacity-60 h-auto min-h-0 p-0 justify-start my-0.5"
             >
               <NavLink
+                // ref={ref}
                 onClick={() => handleLink()}
                 to={subCat.link}
                 className="justify-between text-nowrap py-1 px-3 text-sm font-normal"

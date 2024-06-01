@@ -1,15 +1,25 @@
-import { useToggle } from "usehooks-ts";
+import { useToggle, useOnClickOutside } from "usehooks-ts";
 import { menuCategories } from "../../util/menuCategories";
 import Category from "./Category";
+import { useRef } from "react";
 
 const Menu = () => {
   const [menu1, menu2, menu3] = menuCategories;
   const toggle1 = useToggle();
   const toggle2 = useToggle();
   const toggle3 = useToggle();
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    toggle1[2](false);
+    toggle2[2](false);
+    toggle3[2](false);
+  };
+
+  useOnClickOutside(ref, handleClick);
 
   return (
-    <div className="flex gap-4 h-navbar-top">
+    <div className="flex gap-4 h-navbar-top" ref={ref}>
       <Category
         menuNo={1}
         category={menu1.category}

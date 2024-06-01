@@ -7,6 +7,7 @@ import OrganizationChart from "./OrganizationChart";
 import NewsAndUpdates from "./NewsAndUpdates";
 import Gallery from "./Gallery";
 import FinancialData from "./FinancialData";
+import Home from "../home/Home";
 
 const TheCompany = () => {
   const { id } = useParams();
@@ -28,6 +29,8 @@ const TheCompany = () => {
 
     case "financialdata":
       return <FinancialData />;
+    default:
+      return <Home />;
   }
 };
 

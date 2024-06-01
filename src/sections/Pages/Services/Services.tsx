@@ -8,6 +8,7 @@ import OtherTransports from "./OtherTransports";
 import CustomFormalitiesServices from "./CustomFormalitiesServices";
 import InlandTransportDistribution from "./InlandTransportDistribution";
 import Insurance from "./Insurance";
+import Home from "../home/Home";
 
 const Services = () => {
   const { id } = useParams();
@@ -31,6 +32,8 @@ const Services = () => {
       return <InlandTransportDistribution />;
     case "insurance":
       return <Insurance />;
+    default:
+      return <Home />;
   }
 };
 

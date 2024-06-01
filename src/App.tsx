@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <div className={`min-h-container-desktop ${state && "hidden"}`}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route path="/thecompany/:id" element={<TheCompany />} />
           <Route path="/services/:id" element={<Services />} />
           <Route path="/usefultools/:id" element={<UsefulTools />} />

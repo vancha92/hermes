@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ContainerSpecifications from "./ContainerSpecifications";
 import Converters from "./Converters";
 import Incoterms from "./Incoterms";
+import Home from "../home/Home";
 
 const UsefulTools = () => {
   const { id } = useParams();
@@ -16,6 +17,8 @@ const UsefulTools = () => {
 
     case "containerspecifications":
       return <ContainerSpecifications />;
+    default:
+      return <Home />;
   }
 };
 

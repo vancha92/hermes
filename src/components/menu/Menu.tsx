@@ -1,4 +1,5 @@
 import { menuCategories } from "../../util/menuCategories";
+import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -23,9 +24,12 @@ const Menu = () => {
                     key={index}
                     className="hover:opacity-60 btn btn-ghost h-auto min-h-0 p-0 justify-start"
                   >
-                    <a className="justify-between text-nowrap py-1 px-3 text-sm font-normal">
-                      {subCat}
-                    </a>
+                    <NavLink
+                      to={subCat.link}
+                      className="justify-between text-nowrap py-1 px-3 text-sm font-normal"
+                    >
+                      {subCat.title}
+                    </NavLink>
                   </li>
                 );
               })}

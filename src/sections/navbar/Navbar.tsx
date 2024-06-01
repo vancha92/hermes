@@ -3,9 +3,16 @@ import hermesLogo from "../../assets/logoWhite.jpg";
 import Searchbar from "../../components/searchbar/Searchbar";
 import { useWindowSize } from "usehooks-ts";
 import MobileMenu from "../../components/mobileMenu/MobileMenu";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const windowWidth = useWindowSize().width;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="h-navbar-top max-w-100vw">
@@ -13,7 +20,10 @@ const Navbar = () => {
         {/* Logo */}
         {/* Logo */}
         <div className="flex gap-2 h-full">
-          <div className="flex items-center cursor-pointer">
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={handleClick}
+          >
             <img
               src={hermesLogo}
               alt="mainLogo"

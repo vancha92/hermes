@@ -1,11 +1,13 @@
 import openIcon from "../../assets/plusIcon.png";
 import closeIcon from "../../assets/closeIcon.png";
 import type { Dispatch, SetStateAction } from "react";
+import { NavLink } from "react-router-dom";
+import { useMobileMenuContext } from "../../hooks/useMobileMenuContext";
 
 type params = {
   menuNo: number;
   category: string;
-  subCategory: string[];
+  subCategory: { title: string; link: string }[];
   stateMenu1: boolean;
   stateMenu2: boolean;
   stateMenu3: boolean;
@@ -25,19 +27,21 @@ const MenuCategory = ({
   setMenu2,
   setMenu3,
 }: params) => {
-  var state: any;
+  const { state, changeModalState } = useMobileMenuContext();
+
+  var subCatState: any;
   const setState = () => {
     switch (menuNo) {
       case 1:
-        state = stateMenu1;
+        subCatState = stateMenu1;
         break;
 
       case 2:
-        state = stateMenu2;
+        subCatState = stateMenu2;
         break;
 
       case 3:
-        state = stateMenu3;
+        subCatState = stateMenu3;
         break;
     }
   };
@@ -70,7 +74,7 @@ const MenuCategory = ({
     <div className="">
       <div className="pl-4 pr-20 font-bold relative">
         <div className="pb-2">{category}</div>
-        {state ? (
+        {subCatState ? (
           <div
             className="absolute right-0 bottom-0 ml-4 mr-[3.75rem] p-2"
             onClick={handleToggle}
@@ -87,16 +91,18 @@ const MenuCategory = ({
         )}
         <span className="absolute left-0 right-0 bottom-0 bg-base-300 h-[2px] ml-4 mr-[4.42rem]"></span>
       </div>
-      {state ? (
+      {subCatState ? (
         <div className="flex flex-col p-4 gap-1">
           {subCategory.map((subCat, index) => {
             return (
-              <div
+              <NavLink
+                to={subCat.link}
                 key={index}
                 className="cursor-pointer opacity-75 text-sm px-4"
+                onClick={() => changeModalState!(!state)}
               >
-                {subCat}
-              </div>
+                {subCat.title}
+              </NavLink>
             );
           })}
         </div>

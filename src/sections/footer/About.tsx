@@ -1,13 +1,15 @@
 import hermesLogo from "../../assets/logoWhite.jpg";
 import { menuCategories } from "../../util/menuCategories";
 import { useNavigate } from "react-router-dom";
+import { scrollUp } from "../../util/scrollUp";
 
 const About = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/");
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    scrollUp();
   };
 
   return (

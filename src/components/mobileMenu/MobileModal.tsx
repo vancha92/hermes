@@ -2,7 +2,7 @@ import Social from "../../sections/footer/Social";
 import { menuCategories } from "../../util/menuCategories";
 
 import { useToggle } from "usehooks-ts";
-import MenuCategory from "./MenuCategory";
+import MobileCategory from "./MobileCategory";
 
 const MobileModal = () => {
   const [menu1, menu2, menu3] = menuCategories;
@@ -13,7 +13,7 @@ const MobileModal = () => {
   return (
     <div className="z-30 absolute flex flex-col justify-between bg-base-200 bottom-0 left-0 right-0 min-h-container-mobile translate-y-full border-t-2 border-t-base-300">
       <div className="pt-8">
-        <MenuCategory
+        <MobileCategory
           menuNo={1}
           category={menu1.category}
           subCategory={menu1.subCategory}
@@ -24,7 +24,7 @@ const MobileModal = () => {
           setMenu2={toggle2[2]}
           setMenu3={toggle3[2]}
         />
-        <MenuCategory
+        <MobileCategory
           menuNo={2}
           category={menu2.category}
           subCategory={menu2.subCategory}
@@ -35,7 +35,7 @@ const MobileModal = () => {
           setMenu2={toggle2[2]}
           setMenu3={toggle3[2]}
         />
-        <MenuCategory
+        <MobileCategory
           menuNo={3}
           category={menu3.category}
           subCategory={menu3.subCategory}

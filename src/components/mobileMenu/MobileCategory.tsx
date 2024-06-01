@@ -16,7 +16,7 @@ type params = {
   setMenu3: Dispatch<SetStateAction<boolean>>;
 };
 
-const MenuCategory = ({
+const MobileCategory = ({
   menuNo,
   category,
   subCategory,
@@ -98,7 +98,7 @@ const MenuCategory = ({
               <NavLink
                 to={subCat.link}
                 key={index}
-                className="cursor-pointer opacity-75 text-sm px-4"
+                className="cursor-pointer opacity-75 text-sm px-4 mb-0.5"
                 onClick={() => changeModalState!(!state)}
               >
                 {subCat.title}
@@ -113,4 +113,4 @@ const MenuCategory = ({
   );
 };
 
-export default MenuCategory;
+export default MobileCategory;

@@ -9,6 +9,7 @@ import Home from "./sections/Pages/home/Home";
 import TheCompany from "./sections/Pages/TheCompany/TheCompany";
 import Services from "./sections/Pages/Services/Services";
 import UsefulTools from "./sections/Pages/UsefulTools/UsefulTools";
+import ScrollTopButton from "./util/ScrollTopButton";
 
 function App() {
   const { state } = useMobileMenuContext();
@@ -25,6 +26,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <ScrollTopButton />
       <Wallpaper />
     </div>
   );

@@ -36,7 +36,7 @@ const About = () => {
       <div
         tabIndex={0}
         role="button"
-        className="btn btn-ghost btn-circle avatar absolute top-8 right-4 lg:static"
+        className="btn btn-ghost btn-circle avatar absolute top-8 right-4 lg:static lg:pr-[3px]"
       >
         <div className="rounded-full" onClick={handleClick}>
           <img alt="Tailwind CSS Navbar component" src={hermesLogo} />

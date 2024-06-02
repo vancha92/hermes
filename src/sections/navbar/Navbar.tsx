@@ -4,6 +4,8 @@ import Searchbar from "../../components/searchbar/Searchbar";
 import { useWindowSize } from "usehooks-ts";
 import MobileMenu from "../../components/mobileMenu/MobileMenu";
 import { useNavigate } from "react-router-dom";
+import LanguageButton from "../../components/languages/LanguageButton";
+import ContactButton from "../../util/ContactButton";
 
 const Navbar = () => {
   const windowWidth = useWindowSize().width;
@@ -16,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className="h-navbar-top max-w-100vw">
-      <div className="z-30 fixed h-navbar-top navbar bg-base-100 justify-between p-0 border-b-2 border-b-base-300 shadow-lg">
+      <div className="z-30 fixed h-navbar-top navbar bg-base-100 justify-between p-2 border-b-2 border-b-base-300 shadow-lg">
         {/* Logo */}
         {/* Logo */}
         <div className="flex gap-2 h-full">
@@ -53,8 +55,9 @@ const Navbar = () => {
         {/* Connect and account */}
         {/* Connect and account */}
         <div className="flex justify-end gap-2">
+          {windowWidth > 1023 && <ContactButton />}
           <Searchbar />
-
+          {windowWidth > 1023 && <LanguageButton />}
           {windowWidth < 1024 && <MobileMenu />}
         </div>
       </div>

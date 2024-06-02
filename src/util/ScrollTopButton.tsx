@@ -11,7 +11,7 @@ const ScrollTopButton = () => {
   const scrollVisible =
     "fixed btn bg-[#b8b8b8] border-[#a8a8a8] btn-circle bottom-[12.8%] lg:bottom-8 right-4 lg:right-4";
 
-  const [scrollTop, setScrollTop] = useState(scrollVisible);
+  const [scrollTop, setScrollTop] = useState(scrollHidden);
 
   const scrollFunction = () => {
     if (

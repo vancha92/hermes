@@ -3,6 +3,8 @@ import { menuCategories } from "../../util/menuCategories";
 
 import { useToggle } from "usehooks-ts";
 import MobileCategory from "./MobileCategory";
+import LanguageButton from "../languages/LanguageButton";
+import ContactButton from "../../util/ContactButton";
 
 const MobileModal = () => {
   const [menu1, menu2, menu3] = menuCategories;
@@ -51,7 +53,10 @@ const MobileModal = () => {
       <div className="relative">
         <span className="absolute left-0 right-0 top-0 bg-base-300 h-[2px]"></span>
         <div className="mx-4 invert">
-          <Social />
+          <Social>
+            <ContactButton />
+            <LanguageButton />
+          </Social>
         </div>
       </div>
     </div>

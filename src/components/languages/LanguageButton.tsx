@@ -14,10 +14,10 @@ const LanguageButton = () => {
   useOnClickOutside(ref, handleClick);
 
   const mobile =
-    "w-40 absolute py-3 px-4 top-0 right-0 -translate-y-full invert bg-base-300 rounded-l-xl rounded-t-xl shadow-gray-500 shadow-md flex flex-col gap-2";
+    "w-40 absolute py-3 px-4 top-0 right-0 -translate-y-full invert bg-base-300 rounded-l-lg rounded-t-lg shadow-gray-500 shadow-md flex flex-col gap-2";
 
   const desktop =
-    "absolute bottom-0 right-0 translate-y-full z-[1] p-2 pb-3 shadow-md shadow-gray-500 flex flex-col rounded-b-xl bg-base-200";
+    "absolute bottom-0 right-0 translate-y-full z-[1] p-2 pb-3 flex flex-col dropdownBackground";
 
   return (
     <>
@@ -27,7 +27,7 @@ const LanguageButton = () => {
           role="button"
           className={`btn btn-ghost btn-circle p-0 lg:h-[64px] ${
             stateToggle &&
-            "after:absolute after:left-0 after:right-0 after:bottom-0 after:h-0.5 after:bg-accent"
+            "lg:after:absolute lg:after:left-0 lg:after:right-0 lg:after:bottom-0 lg:after:h-0.5 lg:after:bg-accent"
           }`}
           onClick={() => setToggle((cur) => !cur)}
         >

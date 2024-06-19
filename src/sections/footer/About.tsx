@@ -1,14 +1,18 @@
 import hermesLogo from "../../assets/logoWhite.jpg";
-import { menuCategories } from "../../util/menuCategories";
-import { useNavigate } from "react-router-dom";
+import { menuCategories } from "../../data/categoryData";
+import { NavLink, useNavigate } from "react-router-dom";
 import { scrollUp } from "../../util/scrollUp";
 
 const About = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleLogo = () => {
     navigate("/");
-    // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    scrollUp();
+  };
+
+  const handleLink = (target: string) => {
+    navigate(target);
     scrollUp();
   };
 
@@ -22,12 +26,14 @@ const About = () => {
             </div>
             {content.subCategory.map((subCategory, index) => {
               return (
-                <div
+                <NavLink
+                  to={subCategory.link}
                   key={index}
-                  className="cursor-pointer opacity-75 text-sm hover:underline text-base-100"
+                  onClick={() => handleLink(subCategory.link)}
+                  className="cursor-pointer opacity-75 text-sm hover:underline text-base-100 flex"
                 >
                   {subCategory.title}
-                </div>
+                </NavLink>
               );
             })}
           </div>
@@ -38,7 +44,7 @@ const About = () => {
         role="button"
         className="btn btn-ghost btn-circle avatar absolute top-8 right-4 lg:static lg:pr-[3px]"
       >
-        <div className="rounded-full" onClick={handleClick}>
+        <div className="rounded-full" onClick={handleLogo}>
           <img alt="Tailwind CSS Navbar component" src={hermesLogo} />
         </div>
       </div>

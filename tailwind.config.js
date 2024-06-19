@@ -10,6 +10,9 @@ export default {
         "screen-dynamic": "100dvh",
         "screen-small": "100svh",
         mobileMenu: "calc(100svh - 64px)",
+        "30screenh": "calc(100vh * 0.3)",
+        "25screenh": "calc(100vh * 0.25)",
+        "20screenh": "calc(100vh * 0.20)",
       },
       minHeight: {
         "container-mobile": "calc(100svh - 64px)",

@@ -1,10 +1,10 @@
 import Social from "../../sections/footer/Social";
-import { menuCategories } from "../../util/menuCategories";
+import { menuCategories } from "../../data/categoryData";
 
 import { useToggle } from "usehooks-ts";
 import MobileCategory from "./MobileCategory";
 import LanguageButton from "../languages/LanguageButton";
-import ContactButton from "../../util/ContactButton";
+// import ContactButton from "../../util/ContactButton";
 
 const MobileModal = () => {
   const [menu1, menu2, menu3] = menuCategories;
@@ -54,7 +54,7 @@ const MobileModal = () => {
         <span className="absolute left-0 right-0 top-0 bg-base-300 h-[2px]"></span>
         <div className="mx-4 invert">
           <Social>
-            <ContactButton />
+            {/* <ContactButton /> */}
             <LanguageButton />
           </Social>
         </div>

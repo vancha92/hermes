@@ -72,12 +72,9 @@ const MobileCategory = ({
 
   return (
     <div className="">
-      <div className="pl-4 pr-20 font-bold relative">
+      <div className="pl-4 pr-20 font-bold relative" onClick={handleToggle}>
         <div className="pb-2">{category}</div>
-        <div
-          className="absolute right-0 bottom-0 ml-4 mr-[3.75rem] p-2"
-          onClick={handleToggle}
-        >
+        <div className="absolute right-0 bottom-0 ml-4 mr-[3.75rem] p-2">
           <img
             className="h-6 invert"
             src={subCatState ? closeIcon : openIcon}

@@ -90,7 +90,7 @@ const Category = ({
       <ul
         // ref={ref}
         tabIndex={0}
-        className={`absolute bottom-0 translate-y-full z-[1] p-2 pb-3 shadow-md shadow-gray-500 flex flex-col rounded-b-xl bg-base-200 ${
+        className={`absolute bottom-0 translate-y-full flex flex-col z-[1] p-2 pb-3 dropdownBackground ${
           !subCatState && "hidden"
         }`}
       >

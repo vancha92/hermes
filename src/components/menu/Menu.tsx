@@ -1,5 +1,5 @@
 import { useToggle, useOnClickOutside } from "usehooks-ts";
-import { menuCategories } from "../../util/menuCategories";
+import { menuCategories } from "../../data/categoryData";
 import Category from "./Category";
 import { useRef } from "react";
 

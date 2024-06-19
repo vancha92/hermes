@@ -5,7 +5,7 @@ import { useWindowSize } from "usehooks-ts";
 import MobileMenu from "../../components/mobileMenu/MobileMenu";
 import { useNavigate } from "react-router-dom";
 import LanguageButton from "../../components/languages/LanguageButton";
-import ContactButton from "../../util/ContactButton";
+// import ContactButton from "../../util/ContactButton";
 
 const Navbar = () => {
   const windowWidth = useWindowSize().width;
@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* Connect and account */}
         {/* Connect and account */}
         <div className="flex justify-end gap-2">
-          {windowWidth > 1023 && <ContactButton />}
+          {/* {windowWidth > 1023 && <ContactButton />} */}
           <Searchbar />
           {windowWidth > 1023 && <LanguageButton />}
           {windowWidth < 1024 && <MobileMenu />}

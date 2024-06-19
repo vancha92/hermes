@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 // Pages
 import ContainerSpecifications from "./ContainerSpecifications";
-import Converters from "./Converters";
+import Converter from "./Converter/Converter";
 import Incoterms from "./Incoterms";
 import Home from "../home/Home";
 
@@ -12,8 +12,8 @@ const UsefulTools = () => {
   switch (id) {
     case "incoterms":
       return <Incoterms />;
-    case "converters":
-      return <Converters />;
+    case "converter":
+      return <Converter />;
 
     case "containerspecifications":
       return <ContainerSpecifications />;

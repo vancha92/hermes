@@ -35,7 +35,7 @@ const Carousel = () => {
       <div
         className={`relative w-full 2xl:rounded-lg shadow-md shadow-gray-500`}
       >
-        <div className="min-h-[134px] h-20screenh max-h-[426px]">
+        <div className="min-h-[134px] h-20screenh lg:h-25screenh max-h-[426px]">
           {number === 1 ? (
             <Slide1 setNumber={setNumber} />
           ) : number === 2 ? (

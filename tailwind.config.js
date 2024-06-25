@@ -19,6 +19,9 @@ export default {
         "container-desktop": "calc(100svh - 64px)",
         mobileMenu: "calc(100svh - 64px)",
       },
+      maxHeight: {
+        scrollTable: "calc(100svh - 250px)",
+      },
       width: {
         992: "992px",
         "9/10": "90%",

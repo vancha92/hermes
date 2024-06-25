@@ -396,7 +396,7 @@ export const unitsByMeasure: UnitsByMeasure[] = [
   // },
   {
     index: 5,
-    units: ["m", "km", "cm", "ft", "yd", "mi"],
+    units: ["mm", "m", "km", "cm", "in", "ft", "yd", "mi"],
   },
   {
     index: 6,

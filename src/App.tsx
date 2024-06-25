@@ -1,5 +1,3 @@
-import Footer from "./sections/footer/Footer";
-import Navbar from "./sections/navbar/Navbar";
 import Wallpaper from "./util/Wallpaper";
 import { Route, Routes } from "react-router-dom";
 import { useMobileMenuContext } from "./hooks/useMobileMenuContext";
@@ -7,12 +5,15 @@ import { useMobileMenuContext } from "./hooks/useMobileMenuContext";
 import GetInTouchButton from "./util/GetInTouchButton";
 
 // Routes
-import Home from "./sections/Pages/home/Home";
-import TheCompany from "./sections/Pages/TheCompany/TheCompany";
-import Services from "./sections/Pages/Services/Services";
-import UsefulTools from "./sections/Pages/UsefulTools/UsefulTools";
-import Contact from "./sections/Pages/Contact/Contact";
-import RequestForm from "./sections/Pages/Contact/RequestForm";
+
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import Contact from "./pages/Contact/Contact";
+import RequestForm from "./pages/Contact/RequestForm";
+import TheCompany from "./pages/TheCompany/TheCompany";
+import Services from "./pages/Services/Services";
+import UsefulTools from "./pages/UsefulTools/UsefulTools";
 
 function App() {
   const { state } = useMobileMenuContext();
@@ -25,8 +26,8 @@ function App() {
           <Route path="/*" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact/requestform" element={<RequestForm />} />
-          <Route path="/thecompany/:id" element={<TheCompany />} />
           <Route path="/services/:id" element={<Services />} />
+          <Route path="/thecompany/:id" element={<TheCompany />} />
           <Route path="/usefultools/:id" element={<UsefulTools />} />
         </Routes>
       </div>

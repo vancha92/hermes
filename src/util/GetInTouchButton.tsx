@@ -8,6 +8,7 @@ import { useOnClickOutside, useWindowSize } from "usehooks-ts";
 import { openEmailClient } from "./openEmailClient";
 import { NavLink } from "react-router-dom";
 import ScrollTopButton from "./ScrollTopButton";
+import { scrollUp } from "./scrollUp";
 
 const GetInTouchButton = () => {
   const [stateToggle, setToggle] = useState(false);
@@ -15,6 +16,7 @@ const GetInTouchButton = () => {
 
   const handleToggle = () => {
     setToggle((current) => !current);
+    scrollUp();
   };
 
   const handleMail = () => {
@@ -39,7 +41,7 @@ const GetInTouchButton = () => {
         {/* BUTTON */}
         {/* BUTTON */}
         <div
-          className="z-50 cursor-pointer bg-accent hover:bg-slate-500 absolute -bottom-0.5 left-0 -translate-x-full rounded-l-lg border-b-2 border-l-2 border-t-2 border-r-0 border-base-300 hover:border-b-2 hover:border-l-2 hover:border-t-2 hover:border-r-0 hover:border-base-300 w-10 lg:w-auto h-10 lg:h-auto shadow-md shadow-black"
+          className="z-50 cursor-pointer transition ease-in-out delay-100 bg-accent hover:bg-slate-500 absolute -bottom-0.5 left-0 -translate-x-full rounded-l-lg border-b-2 border-l-2 border-t-2 border-r-0 border-base-300 hover:border-b-2 hover:border-l-2 hover:border-t-2 hover:border-r-0 hover:border-base-300 w-10 lg:w-auto h-10 lg:h-auto shadow-md shadow-black"
           onClick={handleToggle}
         >
           {windowWidth > 1023 ? (

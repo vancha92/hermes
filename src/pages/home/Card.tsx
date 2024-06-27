@@ -22,10 +22,10 @@ const Card = ({ subCat }: params) => {
       <div className="card-body lg:max-w-[80%]">
         <h2 className="card-title text-accent">{subCat.title}</h2>
         <p className="text-pretty">{subCat.description}</p>
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-end pt-2">
           <button
             onClick={() => handleLink(subCat.link)}
-            className="cursor-pointer text-sm lg:text-base px-3 lg:px-4 py-2 text-base-100 bg-accent rounded-lg transition ease-in-out delay-100 hover:bg-slate-500"
+            className="cursor-pointer text-sm px-3 lg:px-4 py-2 text-base-100 bg-accent rounded-lg transition ease-in-out delay-100 hover:bg-slate-500"
           >
             more
           </button>

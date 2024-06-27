@@ -125,7 +125,7 @@ const containerSpecs = [
 const ContainerSpecifications = () => {
   return (
     <div className="page">
-      <div className="narrowPage">
+      <div className="narrowPage pt-10">
         <div className="contentContainer">
           <div className="text-accent text-xl font-semibold pb-4">
             The INCOTERMS 2010, which are currently in force are:
@@ -152,8 +152,8 @@ const ContainerSpecifications = () => {
                         {container.container.type}
                       </th>
 
-                      <tr>
-                        <td>
+                      <td>
+                        <div>
                           <div className="flex justify-between">
                             <p>L:</p>
                             <p>{container.interiorOpening.L}</p>
@@ -166,8 +166,8 @@ const ContainerSpecifications = () => {
                             <p>H:</p>
                             <p>{container.interiorOpening.H}</p>
                           </div>
-                        </td>
-                      </tr>
+                        </div>
+                      </td>
 
                       <td>
                         <br />

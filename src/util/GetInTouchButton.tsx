@@ -111,7 +111,7 @@ const GetInTouchButton = () => {
                 </div>
                 <NavLink
                   className="text-base-100 text-sm cursor-pointer hover:underline"
-                  to={"/contact/requestform"}
+                  to={"/requestform"}
                   onClick={handleToggle}
                 >
                   Place an inquiry &crarr;

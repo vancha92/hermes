@@ -1,5 +1,5 @@
 import hermesLogo from "../../assets/logoWhite.jpg";
-import Searchbar from "../../components/searchbar/Searchbar";
+// import Searchbar from "../../components/searchbar/Searchbar";
 import { useWindowSize } from "usehooks-ts";
 import { useNavigate } from "react-router-dom";
 import LanguageButton from "../../components/languages/LanguageButton";
@@ -44,7 +44,8 @@ const Navbar = () => {
             <>
               <div className="hidden lg:flex">
                 <div className="h-8"></div>
-                <div className="divider divider-horizontal m-0 before:w-[1px] before:bg-[#eceaea] after:w-[1px] after:bg-[#eceaea]"></div>
+                <div className="divider divider-horizontal m-0 before:w-[2px] before:bg-accent after:w-[2px] after:bg-accent rounded-full before:bg-opacity-20 after:bg-opacity-20"></div>
+                {/* <div className="divider divider-horizontal m-0 before:w-[1px] before:bg-[#eceaea] after:w-[1px] after:bg-[#eceaea]"></div> */}
                 <div className="h-8"></div>
               </div>
               <div className="flex justify-start gap-2">
@@ -58,7 +59,7 @@ const Navbar = () => {
         {/* Connect and account */}
         <div className="flex justify-end gap-2">
           {/* {windowWidth > 1023 && <ContactButton />} */}
-          <Searchbar />
+          {/* <Searchbar /> */}
           {windowWidth > 1023 && <LanguageButton />}
           {windowWidth < 1024 && <MobileMenu />}
         </div>

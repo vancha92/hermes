@@ -24,7 +24,7 @@ const incoterms2010 = [
 const Incoterms = () => {
   return (
     <div className="page">
-      <div className="narrowPage">
+      <div className="narrowPage pt-10">
         <div className="contentContainer">
           <div className="text-accent text-xl font-semibold pb-4">
             The INCOTERMS 2010, which are currently in force are:
@@ -43,9 +43,9 @@ const Incoterms = () => {
                   return (
                     <tr key={index} className="hover">
                       <th className="bg-base-300">{incoterm.code}</th>
-                      <tr>
-                        <td>{incoterm.text}</td>
-                      </tr>
+                      <td>
+                        <div>{incoterm.text}</div>
+                      </td>
                     </tr>
                   );
                 })}

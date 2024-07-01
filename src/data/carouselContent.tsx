@@ -7,7 +7,7 @@ export const slide1Content = {
 export const slide2Content = {
   title: "Other transports",
   text: "Managing to comply with the total needs of its customers, our company offers various ways of transportation:",
-  link: "/services/seatransports",
+  link: "/services/othertransports",
 };
 export const slide3Content = {
   title: "Useful Tools",

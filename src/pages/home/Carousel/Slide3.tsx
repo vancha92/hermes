@@ -12,7 +12,7 @@ const Slide3 = ({ setNumber }: params) => {
   const windowWidth = useWindowSize().width;
 
   return (
-    <div className="flex justify-between bg-[url('./assets/caroussel//image3.jpg')] w-full h-full bg-left-bottom bg-cover bg-no-repeat 2xl:rounded-b-lg">
+    <div className="flex justify-between bg-[url('./assets/services/seaTransport.jpg')] w-full h-full bg-left-bottom bg-cover bg-no-repeat 2xl:rounded-b-lg">
       <div
         className="w-[15%] h-full cursor-pointer"
         onClick={() => setNumber(2)}

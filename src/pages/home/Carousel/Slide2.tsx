@@ -12,7 +12,7 @@ const Slide2 = ({ setNumber }: params) => {
   const windowWidth = useWindowSize().width;
 
   return (
-    <div className="flex justify-between bg-[url('./assets/caroussel//image2.jpg')] w-full h-full bg-center bg-cover bg-no-repeat 2xl:rounded-b-lg">
+    <div className="flex justify-between bg-[url('./assets/services/airTransport.jpg')] w-full h-full bg-center bg-cover bg-no-repeat 2xl:rounded-b-lg">
       <div
         className="w-[15%] h-full cursor-pointer"
         onClick={() => setNumber(1)}
@@ -24,7 +24,7 @@ const Slide2 = ({ setNumber }: params) => {
         </div>
       </div>
       {windowWidth > 1023 && (
-        <div className="absolute top-5 left-1/4 min-w-96 max-w-[30rem]">
+        <div className="absolute bottom-5 left-[10%] min-w-96 max-w-[30rem]">
           <ContentContainer number={2} />
         </div>
       )}

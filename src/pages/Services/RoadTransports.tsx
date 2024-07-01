@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       Our road services connect all major cities of Europe to every corner of
       Greece, offering immediate and responsible solutions.

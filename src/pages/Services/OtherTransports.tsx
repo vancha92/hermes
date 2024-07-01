@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       Managing to comply with the total needs of its customers, our company has
       reached top quality service and for many years undertakes and can serve

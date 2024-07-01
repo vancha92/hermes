@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       We are able to provide competitive prices for insurance coverage "all
       risks" (clause A and clause C), for the goods we transfer. So, we help the

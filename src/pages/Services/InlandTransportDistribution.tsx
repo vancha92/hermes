@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       For internal transport across Greece, having at our disposal cooperating
       trucks of various types on a daily base, we are able to undertake receipts

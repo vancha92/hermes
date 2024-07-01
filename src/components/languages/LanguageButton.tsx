@@ -57,14 +57,14 @@ const LanguageButton = () => {
                 className="radio border border-accent bg-base-100 checked:bg-accent"
               />
             </div>
-            <div className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3">
+            {/* <div className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3">
               <span className="lg:text-sm">Italian</span>
               <input
                 type="radio"
                 name="radio-10"
                 className="radio border border-accent bg-base-100 checked:bg-accent"
               />
-            </div>
+            </div> */}
           </div>
         )}
       </div>

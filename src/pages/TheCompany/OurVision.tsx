@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       Backbone of our philosophy, and mission of the staff of HERMES LINES S.A,
       is the continuous effort for complete customer satisfaction regarding the

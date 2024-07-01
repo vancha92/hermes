@@ -28,7 +28,7 @@ const OrganizationChart = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 text-sm lg:text-base">
+    <div className="flex flex-col gap-6">
       <div
         className="rounded-lg cursor-pointer"
         onClick={() => handleZoom(orgChart)}

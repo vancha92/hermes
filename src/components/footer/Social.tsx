@@ -14,7 +14,8 @@ const Social = ({ children }: any) => {
   // };
 
   return (
-    <div className="flex justify-between py-4 lg:w-[992px]">
+    <div className="">
+      {/* <div className="flex justify-between py-4 lg:w-[992px]"> */}
       <div className="flex gap-2">
         <div className="">
           <Link

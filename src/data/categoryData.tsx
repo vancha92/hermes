@@ -6,6 +6,13 @@ import otherIcon from "../assets/otherIcon.png";
 import contractIcon from "../assets/contractIcon.png";
 import customIcon from "../assets/customIcon.png";
 
+import financialIcon from "../assets/financialIcon.png";
+import galleryIcon from "../assets/galleryIcon.png";
+import newsIcon from "../assets/newsIcon.png";
+import orgIcon from "../assets/orgIcon.png";
+import visionIcon from "../assets/visionIcon.png";
+import whoIcon from "../assets/whoIcon.png";
+
 export interface I_SubCategory {
   title: string;
   link: string;
@@ -22,12 +29,24 @@ export const menuCategories: I_MenuCategory[] = [
   {
     category: "The Company",
     subCategory: [
-      { title: "Who we are", link: "/thecompany/whoweare" },
-      { title: "Our Vision", link: "/thecompany/ourvision" },
-      { title: "Organization Chart", link: "/thecompany/organizationchart" },
-      { title: "News & Updates", link: "/thecompany/newsandupdates" },
-      { title: "Financial Data", link: "/thecompany/financialdata" },
-      { title: "Gallery", link: "/thecompany/gallery" },
+      { title: "Who we are", link: "/thecompany/whoweare", icon: whoIcon },
+      { title: "Our Vision", link: "/thecompany/ourvision", icon: visionIcon },
+      {
+        title: "Organization Chart",
+        link: "/thecompany/organizationchart",
+        icon: orgIcon,
+      },
+      {
+        title: "News & Updates",
+        link: "/thecompany/newsandupdates",
+        icon: newsIcon,
+      },
+      {
+        title: "Financial Data",
+        link: "/thecompany/financialdata",
+        icon: financialIcon,
+      },
+      { title: "Gallery", link: "/thecompany/gallery", icon: galleryIcon },
     ],
   },
   {

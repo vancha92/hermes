@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       With regular shipments to and from all international commercial ports, we
       offer the most economical options for partial and entire loads, using

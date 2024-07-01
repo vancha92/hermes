@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       Our carefully selected partners, custom brokers, are daily in Customs of
       Piraeus, Athens, Thessaloniki and Athens International Airport.

@@ -1,10 +1,12 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { scrollUp } from "../../util/scrollUp";
 import { menuCategories } from "../../data/categoryData";
+import { useWindowSize } from "usehooks-ts";
 
 const TheCompany = () => {
   const navigate = useNavigate();
   const subCat = menuCategories[0].subCategory;
+  const windowWidth = useWindowSize().width;
 
   const handleLink = (target: string) => {
     navigate(target);
@@ -22,22 +24,39 @@ const TheCompany = () => {
       </div>
 
       <div className="flex gap-4 px-[21px] relative">
-        <div className="sticky top-[80px] contentContainer  min-w-[140px] h-fit flex flex-col gap-3 lg:gap-2">
-          {subCat.map((cat, index) => {
-            return (
+        {windowWidth > 1023 ? (
+          <div className="sticky top-[80px] contentContainer  min-w-[140px] h-fit flex flex-col gap-3 lg:gap-2">
+            {subCat.map((cat, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => handleLink(cat.link)}
+                  className="relative cursor-pointer w-fit hover:opacity-60 text-pretty text-xs lg:text-base"
+                >
+                  <div>{cat.title}</div>
+                  {urlCat.pathname === cat.link && (
+                    <div className="absolute bottom-0 left-0 bg-accent w-full h-0.5 rounded-full" />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="sticky top-[80px] h-fit bg-base-100 rounded-lg shadow-md shadow-gray-500 p-3 flex flex-col gap-4">
+            {subCat.map((cat, index) => (
               <div
                 key={index}
                 onClick={() => handleLink(cat.link)}
-                className="relative cursor-pointer w-fit hover:opacity-60 text-pretty text-xs lg:text-base"
+                className={`rounded-lg p-1 ${
+                  urlCat.pathname === cat.link && "bg-base-300"
+                }`}
               >
-                <div>{cat.title}</div>
-                {urlCat.pathname === cat.link && (
-                  <div className="absolute bottom-0 left-0 bg-accent w-full h-0.5 rounded-full" />
-                )}
+                <img src={cat.icon} alt="service" className="invert w-9" />
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
+
         <div className="contentContainer w-full h-fit">
           {urlCat.pathname.split("/")[2] ? (
             <Outlet />

@@ -1,5 +1,5 @@
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       Our experienced staff undertakes to handle loads, incoming or outgoing, of
       any kind, weight and volume.

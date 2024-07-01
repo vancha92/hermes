@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import wimaLogo from "../../assets/wimaLogo.png";
 
 const eText = (
-  <div className="text-sm lg:text-base">
+  <div className="">
     <div>
       Operating since 1987 as a family business, we offer consistently our
       customers with high quality services.

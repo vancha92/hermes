@@ -35,7 +35,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 text-sm lg:text-base">
+    <div className="flex flex-col gap-6 text-base">
       {images.map((image, index) => (
         <div
           className="rounded-lg cursor-pointer"

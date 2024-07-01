@@ -1,9 +1,7 @@
 const eText = (
   <div className="flex flex-col gap-4 text-sm lg:text-base">
     <div className="p-4 bg-base-200 rounded-lg">
-      <div className="text-right text-accent text-xs lg:text-sm py-2">
-        November 2016
-      </div>
+      <div className="text-right text-accent text-sm py-2">November 2016</div>
       <div className="text-accent font-semibold pb-3">
         HERMES LINES S.A. present at the largest maritime exhibition "Posidonia
         2016"
@@ -17,9 +15,7 @@ const eText = (
     </div>
 
     <div className="p-4 bg-base-200 rounded-lg">
-      <div className="text-right text-accent text-xs lg:text-sm py-2">
-        November 2016
-      </div>
+      <div className="text-right text-accent text-sm py-2">November 2016</div>
       <div className="text-accent font-semibold pb-3">
         Presence of HERMES LINES S.A at the international exhibition CERSAIE
         2016 Bologna - Italy
@@ -32,9 +28,7 @@ const eText = (
     </div>
 
     <div className="p-4 bg-base-200 rounded-lg">
-      <div className="text-right text-accent text-xs lg:text-sm py-2">
-        November 2016
-      </div>
+      <div className="text-right text-accent  text-sm py-2">November 2016</div>
       <div className="text-accent font-semibold pb-3">
         HERMES LINES S.A. at CERSAIE 2016.
       </div>

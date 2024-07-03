@@ -25,7 +25,7 @@ const Carousel = () => {
             return 1;
         }
       });
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);

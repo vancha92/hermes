@@ -23,7 +23,7 @@ const TheCompany = () => {
         </div>
       </div>
 
-      <div className="flex gap-4 px-[21px] relative">
+      <div className="flex gap-2 px-[21px] relative">
         {windowWidth > 1023 ? (
           <div className="sticky top-[80px] contentContainer  min-w-[140px] h-fit flex flex-col gap-3 lg:gap-2">
             {subCat.map((cat, index) => {

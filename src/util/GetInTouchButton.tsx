@@ -31,7 +31,7 @@ const GetInTouchButton = () => {
   useOnClickOutside(ref, handleClick);
 
   return (
-    <div className="z-50 fixed bottom-[12%] lg:bottom-[5%] right-0">
+    <div className="z-30 fixed bottom-[18%] lg:bottom-[5%] right-0">
       <div
         ref={ref}
         className={`absolute bottom-0 right-0 bg-accent border-2 border-base-300 shadow-md shadow-black w-72 px-3 py-2 ${

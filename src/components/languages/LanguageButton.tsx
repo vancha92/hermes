@@ -1,9 +1,13 @@
 import { useState, useRef } from "react";
 import languageIcon from "../../assets/languageIcon.png";
 import { useWindowSize, useOnClickOutside } from "usehooks-ts";
+import { useLangContext } from "../../hooks/useLangContext";
 
 const LanguageButton = () => {
   const windowWidth = useWindowSize().width;
+  const { lang, changeLang } = useLangContext();
+  const [grActive, setGRActive] = useState(lang === "gr-GR");
+  const [usActive, setUSActive] = useState(lang === "us-US");
 
   const [stateToggle, setToggle] = useState(false);
 
@@ -12,6 +16,18 @@ const LanguageButton = () => {
     setToggle(false);
   };
   useOnClickOutside(ref, handleClick);
+
+  const handleLang = (lang: string) => {
+    changeLang!(lang);
+    if (lang === "gr-GR") {
+      setGRActive(true);
+      setUSActive(false);
+    }
+    if (lang === "us-US") {
+      setGRActive(false);
+      setUSActive(true);
+    }
+  };
 
   const mobile =
     "w-40 absolute py-3 px-4 top-0 right-0 -translate-y-full invert bg-base-300 rounded-l-lg rounded-t-lg shadow-gray-500 shadow-md flex flex-col gap-2";
@@ -41,30 +57,32 @@ const LanguageButton = () => {
         </div>
         {stateToggle && (
           <div className={windowWidth > 1023 ? desktop : mobile}>
-            <div className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3">
+            <div
+              className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3"
+              onClick={() => handleLang("us-US")}
+            >
               <span className="lg:text-sm">English</span>
-              <input
-                type="radio"
-                name="radio-10"
-                className="radio border border-accent bg-base-100 checked:bg-accent"
-              />
+              <div className="w-7 h-7 border border-gray-300 bg-base-100 rounded-full flex justify-center items-center">
+                <div
+                  className={`${
+                    !usActive && "opacity-0"
+                  } w-3 h-3 bg-accent rounded-full transition ease-in-out delay-100`}
+                />
+              </div>
             </div>
-            <div className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3">
+            <div
+              className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3"
+              onClick={() => handleLang("gr-GR")}
+            >
               <span className="lg:text-sm">Greek</span>
-              <input
-                type="radio"
-                name="radio-10"
-                className="radio border border-accent bg-base-100 checked:bg-accent"
-              />
+              <div className="w-7 h-7 border border-gray-300 bg-base-100 rounded-full flex justify-center items-center">
+                <div
+                  className={`${
+                    !grActive && "opacity-0"
+                  } w-3 h-3 bg-accent rounded-full transition ease-in-out delay-100`}
+                />
+              </div>
             </div>
-            {/* <div className="cursor-pointer flex justify-between items-center content-center gap-4 my-0.5 lg:py-1 px-3">
-              <span className="lg:text-sm">Italian</span>
-              <input
-                type="radio"
-                name="radio-10"
-                className="radio border border-accent bg-base-100 checked:bg-accent"
-              />
-            </div> */}
           </div>
         )}
       </div>

@@ -11,7 +11,7 @@ const MobileModal = () => {
   const toggle3 = useToggle();
 
   return (
-    <div className="z-30 absolute flex flex-col justify-between bg-base-200 bottom-0 left-0 right-0 min-h-container-mobile translate-y-full border-t-2 border-t-base-300">
+    <div className="z-50 absolute flex flex-col justify-between bg-base-200 bottom-0 left-0 right-0 min-h-container-mobile translate-y-full border-t-2 border-t-base-300">
       <div className="pt-8">
         <MobileCategory
           menuNo={1}
@@ -50,11 +50,9 @@ const MobileModal = () => {
 
       <div className="relative">
         <span className="absolute left-0 right-0 top-0 bg-base-300 h-[2px]"></span>
-        <div className="mx-4 invert">
-          <Social>
-            {/* <ContactButton /> */}
-            <LanguageButton />
-          </Social>
+        <div className="p-4 invert flex justify-between">
+          <Social />
+          <LanguageButton />
         </div>
       </div>
     </div>
